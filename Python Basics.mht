@@ -1,0 +1,1638 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: Python Basics
+Date: Thu, 2 Feb 2012 10:57:05 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CCE199.66D34730"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6157
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CCE199.66D34730
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.astro.ufl.edu/~warner/prog/python.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Python Basics</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"><LINK=20
+href=3D"http://www.astro.ufl.edu/~warner/prog/prog_style.css" =
+type=3Dtext/css=20
+rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.6000.17107" name=3DGENERATOR></HEAD>
+<BODY>
+<H1>Python Basics</H1>
+<HR>
+<B>About Python:</B> Python is a high level scripting language with =
+object=20
+oriented features.=20
+<OL><SPAN class=3Dheader>
+  <LI>Syntax</SPAN><BR>Python programs can be written using any text =
+editor and=20
+  should have the extension <SPAN class=3Dtags>.py</SPAN>. Python =
+programs do not=20
+  have a required first or last line, but can be given the location of =
+python as=20
+  their first line: <SPAN class=3Dcode>#!/usr/bin/python</SPAN> and =
+become=20
+  executable. Otherwise, python programs can be run from a command =
+prompt by=20
+  typing <SPAN class=3Dtags>python file.py</SPAN>. There are no braces =
+{} or=20
+  semicolons ; in python. It is a very high level language. Instead of =
+braces,=20
+  blocks are identified by having the same indentation. <BR>
+  <TABLE cellPadding=3D4 border=3D0>
+    <TBODY>
+    <TR>
+      <TD bgColor=3D#dddddd>
+        <DIV><CODE><SPAN class=3Dcode>#!/usr/bin/python<BR>if (x &gt;=20
+        y):<BR>&nbsp;&nbsp;&nbsp;print("x is greater than=20
+        y")<BR>&nbsp;&nbsp;&nbsp;x =3D x =
+-1<BR>else:<BR>&nbsp;&nbsp;&nbsp;print("x=20
+        is less than or equal to y")<BR></SPAN></CODE></DIV></TD>
+      <TD width=3D30></TD>
+      <TD vAlign=3Dtop bgColor=3D#ddeedd>
+        <DIV><B>Comments</B> are supported in the same style as Perl:=20
+        <CODE><BR><SPAN class=3Dcode>print("This is a test")</SPAN> =
+#This is a=20
+        comment.<BR>#This is also a comment. There are no multi-line=20
+        comments.<BR></CODE></DIV></TD></TR></TBODY></TABLE><BR><SPAN =
+class=3Dheader>
+  <LI>Variables and Datatypes</SPAN><BR>Variables in Python follow the =
+standard=20
+  nomenclature of an alphanumeric name beginning in a letter or =
+underscore.=20
+  Variable names are case sensitive. Variables do not need to be =
+declared and=20
+  their datatypes are inferred from the assignment statement.<BR>
+  <TABLE cellPadding=3D4 border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop>Python supports the following data types:
+        <UL>
+          <LI>boolean=20
+          <LI>integer=20
+          <LI>long=20
+          <LI>float=20
+          <LI>string=20
+          <LI>list=20
+          <LI>object=20
+          <LI>None </LI></UL></TD>
+      <TD width=3D30></TD>
+      <TD vAlign=3Dtop bgColor=3D#ddddee>
+        <DIV><B>Example:</B><BR><CODE><SPAN class=3Dcode>bool =3D =
+True<BR>name =3D=20
+        "Craig"<BR>age =3D 26<BR>pi =3D 3.14159<BR>print(name + ' is ' + =
+str(age) +=20
+        ' years old.')<BR></SPAN>-&gt; <SPAN class=3Doutput>Craig is 26 =
+years=20
+        old.</SPAN> </CODE></DIV></TD></TR>
+    <TR>
+      <TD bgColor=3D#eedddd colSpan=3D3>
+        <DIV><B>Variable Scope:</B> Most variables in Python are local =
+in scope=20
+        to their own function or class. For instance if you define <SPAN =
+
+        class=3Dcode>a =3D 1</SPAN> within a function, then <SPAN=20
+        class=3Dcode>a</SPAN> will be available within that entire =
+function but=20
+        will be undefined in the main program that calls the function. =
+Variables=20
+        defined within the main program are accessible to the main =
+program but=20
+        not within functions called by the main program. <BR><B>Global=20
+        Variables:</B> Global variables, however, can be declared with =
+the <SPAN=20
+        class=3Dcode>global</SPAN> keyword. <BR><CODE><SPAN =
+class=3Dcode>a =3D 1<BR>b=20
+        =3D 2<BR>def Sum():<BR>&nbsp;&nbsp; global a, b<BR>&nbsp;&nbsp; =
+b =3D a +=20
+        b<BR>Sum()<BR>print(b)<BR>-&gt; <SPAN class=3Doutput>3</SPAN>=20
+        </SPAN></CODE></DIV></TD></TR></TBODY></TABLE><BR><SPAN =
+class=3Dheader>
+  <LI>Statements and Expressions</SPAN><BR>
+  <TABLE cellPadding=3D4 border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop>Some basic Python statements include:
+        <UL>
+          <LI><B>print</B>: Output strings, integers, or any other =
+datatype.=20
+          <LI><B>The assignment statement</B>: Assigns a value to a =
+variable.=20
+          <LI><B>input</B>: Allow the user to input numbers or booleans. =
+<SPAN=20
+          class=3Dtags>WARNING:</SPAN> input accepts your input as a =
+command and=20
+          thus can be unsafe.=20
+          <LI><B>raw_input</B>: Allow the user to input strings. If you =
+want a=20
+          number, you can use the <SPAN class=3Dcode>int</SPAN> or <SPAN =
+
+          class=3Dcode>float </SPAN>functions to convert from a string.=20
+          <LI><B>import</B>: Import a module into Python. Can be used as =
+<SPAN=20
+          class=3Dcode>import math</SPAN> and all functions in math can =
+then be=20
+          called by <SPAN class=3Dcode>math.sin(1.57)</SPAN> or =
+alternatively=20
+          <SPAN class=3Dcode>from math import sin</SPAN> and then the =
+sine=20
+          function can be called with <SPAN =
+class=3Dcode>sin(1.57)</SPAN>.=20
+      </LI></UL></TD>
+      <TD width=3D30></TD>
+      <TD vAlign=3Dtop width=3D"50%" bgColor=3D#ddeeee rowSpan=3D2>
+        <DIV><B>Examples:</B><BR><CODE><SPAN class=3Dcode>print "Hello=20
+        World"<BR>print('Print works with or without =
+parenthesis')<BR>print("and=20
+        single or double quotes")<BR>print("Newlines can be escaped=20
+        like\nthis.")<BR>print("This text will be =
+printed"),<BR>print("on one=20
+        line becaue of the comma.")<BR>name =3D raw_input("Enter your =
+name:=20
+        ")<BR>a =3D int(raw_input("Enter a number: "))<BR>print(name + =
+"'s number=20
+        is " + str(a))<BR>a =3D b =3D 5<BR>a =3D a + 4<BR>print =
+a,b<BR><SPAN=20
+        class=3Doutput>9 5</SPAN> </CODE></DIV></SPAN></TD></TR>
+    <TR>
+      <TD>Python expressions can include:<BR><SPAN class=3Dcode>a =3D b =
+=3D 5</SPAN>=20
+        #The assignment statement<BR><SPAN class=3Dcode>b +=3D 1</SPAN>=20
+        #post-increment<BR><SPAN class=3Dcode>c =3D =
+"test"</SPAN><BR><SPAN=20
+        class=3Dcode>import os,math</SPAN> #Import the os and math=20
+        modules<BR><SPAN class=3Dcode>from math import *</SPAN> #Imports =
+all=20
+        functions from the math =
+module<BR></TD></TR></TBODY></TABLE><BR><SPAN=20
+  class=3Dheader>
+  <LI>Operators and Maths</SPAN><BR>
+  <TABLE cellPadding=3D4 border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop bgColor=3D#eeddee>
+        <DIV><B>Operators:</B>
+        <UL>
+          <LI>Arithmatic: <SPAN class=3Dtags>+, -, *, /, and % =
+(modulus)</SPAN>=20
+          <LI>Comparison: <SPAN class=3Dtags>=3D=3D, !=3D, &lt;, &gt;, =
+&lt;=3D,=20
+          &gt;=3D</SPAN>=20
+          <LI>Logical: <SPAN class=3Dtags>and, or, not</SPAN>=20
+          <LI>Exponentiation: <SPAN class=3Dtags>**</SPAN>=20
+          <LI>Execution: <SPAN class=3Dcode>os.system('ls =
+-l')<BR>#Requires import=20
+          os </LI></UL></DIV></SPAN></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop bgColor=3D#eeeedd>
+        <DIV><B>Maths:</B> <SPAN class=3Dtags>Requires import =
+math</SPAN>=20
+        <UL><CODE>
+          <LI>Absolute Value: <SPAN class=3Dcode>a =3D abs(-7.5)</SPAN>=20
+          <LI>Arc sine: <SPAN class=3Dcode>x =3D asin(0.5)</SPAN> =
+#returns in rads=20
+          <LI>Ceil (round up): <SPAN =
+class=3Dcode>print(ceil(4.2))</SPAN>=20
+          <LI>Cosine: <SPAN class=3Dcode>a =3D cos(x)</SPAN> #x in rads=20
+          <LI>Degrees: <SPAN class=3Dcode>a =3D =
+degrees(asin(0.5))</SPAN> #a=3D30=20
+          <LI>Exp: <SPAN class=3Dcode>y =3D exp(x)</SPAN> #y=3De^x=20
+          <LI>Floor (round down): <SPAN class=3Dcode>a =3D =
+floor(a+0.5)</SPAN>=20
+          <LI>Log: <SPAN class=3Dcode>x =3D log(y);</SPAN> #Natural=20
+          Log<BR>&nbsp;&nbsp;&nbsp;<SPAN class=3Dcode>x =3D =
+log(y,5);</SPAN> #Base-5=20
+          log=20
+          <LI>Log Base 10: <SPAN class=3Dcode>x =3D log10(y)</SPAN>=20
+          <LI>Max: <SPAN class=3Dcode>mx =3D max(1, 7, 3, 4)</SPAN>=20
+          #7<BR>&nbsp;&nbsp;&nbsp;<SPAN class=3Dcode>mx =3D =
+max(arr)</SPAN> #max=20
+          value in array=20
+          <LI>Min: <SPAN class=3Dcode>mn =3D min(3, 0, -1, x)</SPAN> =
+#min value=20
+          <LI>Powers: <SPAN class=3Dcode>x =3D pow(y,3)</SPAN> #x=3Dy^3=20
+          <LI>Radians: <SPAN class=3Dcode>a =3D cos(radians(60))</SPAN> =
+#a=3D0.5=20
+          <LI>Random #: <SPAN class=3Dtags>Random number functions =
+require import=20
+          random</SPAN><BR>&nbsp;&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>random.seed()</SPAN> #Set the seed based on the =
+system=20
+          time.<BR>&nbsp;&nbsp;&nbsp;<SPAN class=3Dcode>x =3D =
+random()</SPAN>=20
+          #Random number in the range [0.0, =
+1.0)<BR>&nbsp;&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>y =3D randint(a,b)</SPAN> #Random integer in the =
+range [a,=20
+          b]<BR>
+          <LI>Round: <SPAN class=3Dcode>print round(3.793,1;</SPAN> #3.8 =
+- rounded=20
+          to 1 decimal<BR>&nbsp;&nbsp;&nbsp;<SPAN class=3Dcode>a =3D=20
+          round(3.793,0)</SPAN> #a=3D4.0=20
+          <LI>Sine: <SPAN class=3Dcode>a =3D sin(1.57)</SPAN> #in rads=20
+          <LI>Square Root: <SPAN class=3Dcode>x =3D sqrt(10)</SPAN> =
+#3.16...=20
+          <LI>Tangent: <SPAN class=3Dcode>print tan(3.14)#</SPAN> #in =
+rads=20
+          </CODE></LI></UL></DIV></TD></TR></TBODY></TABLE><BR><SPAN =
+class=3Dheader>
+  <LI>Strings</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop width=3D"60%">Strings can be specified using =
+single quotes=20
+        or double quotes. Strings do not expand escape sequences unless =
+it is=20
+        defined as a raw string by placing an r before the first quote: =
+<SPAN=20
+        class=3Dcode>print 'I\'ll be back.'</SPAN>.<BR><SPAN =
+class=3Dcode>print=20
+        r'The newline \n will not expand'<BR>a =3D "Gators"<BR>print =
+"The value of=20
+        a is \t" + a</SPAN><BR><SPAN class=3Doutput>-&gt; The value of a =
+is=20
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Gators</SPAN><BR>If a string is =
+not=20
+        defined as raw, escapes such as <SPAN class=3Dtags>\n, \r, \t, =
+\\, and=20
+        \"</SPAN> may be used. <BR>Optional syntax: Strings that start =
+and end=20
+        with """ may span multiple lines: <SPAN class=3Dcode>print =
+"""<BR>This is=20
+        an example of a string in the heredoc syntax.<BR>This text can =
+span=20
+        multiple lines<BR>"""</SPAN><BR></TD>
+      <TD width=3D20></TD>
+      <TD vAlign=3Dtop bgColor=3D#eeeeee><B>String =
+Operators:</B><BR>Concatenation=20
+        is done with the + operator.<BR>Converting to numbers is done =
+with the=20
+        casting operations:<BR><SPAN class=3Dcode>x =3D 1 + =
+float(10.5)</SPAN>=20
+        #$x=3D11.5, float<BR><SPAN class=3Dcode>x =3D 4 - =
+int("3")</SPAN> #$x=3D1,=20
+        int<BR>You can convert to a string with the str casting=20
+        function:<BR><SPAN class=3Dcode>s =3D str(3.5)</SPAN><BR><SPAN=20
+        class=3Dcode>name =3D "Lee"</SPAN><BR><SPAN class=3Dcode>print =
+name + "'s=20
+        number is " + str(24)</SPAN><BR><BR><B>Comparing =
+Strings:</B><BR>Strings=20
+        can be compared with the standard operators listed above: =
+=3D=3D, !=3D, &lt;,=20
+        &gt;, &lt;=3D, and &gt;=3D. </TD>
+    <TR>
+      <TD bgColor=3D#eeeecc colSpan=3D3>
+        <DIV><B>String Functions:</B>
+        <UL><CODE>&nbsp;&nbsp;<SPAN class=3Dcode>s =3D "Go Gators! Come =
+on=20
+          Gators!"</SPAN><BR>
+          <LI><B>Extracting substrings</B>: Strings in Python can be =
+subscripted=20
+          just like an array: <SPAN class=3Dtags>s[4] =3D 'a'</SPAN>. =
+Like in IDL,=20
+          indices can be specified with slice notation i.e., two indices =
+
+          separated by a colon. This will return a substring containing=20
+          characters index1 through index2-1. Indices can also be =
+negative, in=20
+          which case they count from the right, i.e. -1 is the last =
+character.=20
+          Thus substrings can be extracted like<BR>&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>x =3D s[3:9]</SPAN> #x =3D =
+"Gators"<BR>&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>x =3D s[:2]</SPAN> #x =3D =
+"Go"<BR>&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>x =3D s[19:]</SPAN> #x =3D =
+"Gators!"<BR>&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>x =3D s[-7:-2]</SPAN> #x =3D "Gator"<BR>However, =
+strings are=20
+          immutable so s[2] =3D 'a' would cause an error.<BR>
+          <LI>int <B>count</B>(sub [,start[,end]]): returns the number =
+of=20
+          occurances of the substring sub in the =
+string<BR>&nbsp;&nbsp;<SPAN=20
+          class=3Dcode>x =3D s.count("Gator")</SPAN> #x =3D 2<BR>
+          <LI>boolean <B>endswidth</B>(sub [,start[,end]]): returns true =
+if the=20
+          string ends with the specified substring and false=20
+          otherwise:<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D=20
+          s.endswith("Gators")</SPAN> #x =3D False<BR>
+          <LI>int <B>find</B>(sub [,start[,end]]): returns the numeric =
+position=20
+          of the first occurance of sub in the string. Returns -1 if sub =
+is not=20
+          found.<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D =
+s.find("Gator")</SPAN> #x =3D=20
+          3<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D =
+s.find("gator")</SPAN> #x =3D=20
+          -1<BR>
+          <LI>string <B>join</B>(array): combines elements of the string =
+array=20
+          into a single string and returns it. The separator between =
+elements is=20
+          the string providing this method.<BR>&nbsp;&nbsp;<SPAN =
+class=3Dcode>a =3D=20
+          ['abc','def','ghi']</SPAN><BR>&nbsp;&nbsp;<SPAN class=3Dcode>t =
+=3D=20
+          "--"</SPAN><BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D =
+t.join(a)</SPAN> #x =3D=20
+          abc--def--ghi<BR>
+          <LI>int <B>len</B>(string): returns the length of the=20
+          string<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D len(s)</SPAN> =
+#x =3D 26<BR>
+          <LI>string <B>lower</B>(): returns a version of a string with =
+all=20
+          lower case lettters.<BR>&nbsp;&nbsp;<SPAN class=3Dcode>print=20
+          s.lower()</SPAN> #go gators! come on gators!<BR>
+          <LI>string <B>replace</B>(old, new [,count]): returns a copy =
+of the=20
+          string with all occurances of old replaced by new. If the =
+optional=20
+          count argument is given, only the first count occurances are=20
+          replaced.<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D=20
+          s.replace("Gators","Tigers",1)</SPAN> #x =3D Go Tigers! Come =
+on=20
+          Gators!<BR>
+          <LI>int <B>rfind</B>(sub [,start[,end]]): same as find but =
+returns the=20
+          numeric position of the last occurance of sub in the=20
+          string.<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D =
+s.rfind("Gator")</SPAN> #x=20
+          =3D 19<BR>
+          <LI>array <B>split</B>([sep [,maxsplit]]): splits a single =
+string into=20
+          a string array using the separator defined. If no separator is =
+
+          defined, whitespace is used. Consecutive whitespace delimiters =
+are=20
+          then treated as one delimiter. Optionally you can specify the =
+maximum=20
+          number of splits so that the max size of the array would be=20
+          maxsplit+1.<BR>&nbsp;&nbsp;<SPAN class=3Dcode>a =3D =
+s.split()</SPAN>=20
+          #a=3D['Go', 'Gators!', 'Come', 'on', 'Gators!']<BR>
+          <LI>boolean <B>startswidth</B>(sub [,start[,end]]): returns =
+true if=20
+          the string starts with the specified substring and false=20
+          otherwise:<BR>&nbsp;&nbsp;<SPAN class=3Dcode>x =3D=20
+          s.startswith("Go")</SPAN> #x =3D True<BR>
+          <LI>string <B>strip</B>([chars]): returns a copy of the string =
+with=20
+          leading and trailing characters removed. If chars (a string) =
+is not=20
+          specified, leading and trailing whitespace is removed.=20
+          <LI>string <B>upper</B>(): returns a version of a string with =
+all=20
+          upper case=20
+  =
+lettters.<BR></CODE></LI></UL></DIV></TD></TR></TBODY></TABLE><BR><SPAN=20
+  class=3Dheader>
+  <LI>Arrays</SPAN><BR>Arrays in basic Python are actually lists that =
+can=20
+  contain mixed datatypes. However, the <SPAN =
+class=3Dtags>numarray</SPAN> module=20
+  contains support for true arrays, including multi-dimensional arrays, =
+as well=20
+  as IDL-style array operations and the where function. To use arrays, =
+you must=20
+  <SPAN class=3Dcode>import numarray</SPAN> or <SPAN class=3Dcode>from =
+numarray=20
+  import *</SPAN>. Unfortunately, numarray generally only suports =
+numeric=20
+  arrays. Lists must be used for strings or objects. By importing <SPAN=20
+  class=3Dtags>numarray.strings</SPAN> and <SPAN=20
+  class=3Dtags>numarray.objects</SPAN>, you can convert string and =
+object lists to=20
+  arrays and use some of the numarray features, but only numeric lists =
+are fully=20
+  supported by numarray.=20
+  <UL>
+    <LI><B>Creating lists:</B> A list can be created by defining it with =
+[]. A=20
+    numbered list can also be created with the range function which =
+takes start=20
+    and stop values and an increment.<BR><SPAN class=3Dcode>list =3D [2, =
+4, 7,=20
+    9]<BR>list2 =3D [3, "test", True, 7.4]<BR>a =3D range(5)</SPAN> #a =
+=3D=20
+    [0,1,2,3,4]<BR><SPAN class=3Dcode>a =3D range(10,0,-2)</SPAN> #a =3D =
+[10,8,6,4,2]=20
+    <BR>An empty list can be initialized with [] and then the <SPAN=20
+    class=3Dtags>append</SPAN> command can be used to append data to the =
+end of=20
+    the list:<BR><SPAN=20
+    class=3Dcode>a=3D[]<BR>a.append("test")<BR>a.append(5)<BR>print=20
+    a<BR></SPAN><SPAN class=3Doutput>-&gt; ['test', =
+5]</SPAN><BR>Finally, if you=20
+    want a list to have a predetermined size, you can create a list and =
+fill it=20
+    with None's:<BR><SPAN class=3Dcode>a=3D[None]*length<BR>a[5] =3D =
+"Fifth"<BR>a[3] =3D=20
+    6<BR>print len(a)<BR></SPAN><SPAN class=3Doutput>-&gt; =
+10</SPAN><BR><SPAN=20
+    class=3Dcode>print a<BR></SPAN><SPAN class=3Doutput>-&gt; [None, =
+None, None, 6,=20
+    None, 'Fifth', None, None, None, None]</SPAN><BR>
+    <LI><B>Removing from lists:</B> The <SPAN class=3Dtags>pop</SPAN> =
+method can=20
+    be used to remove any item from the list:<BR><SPAN=20
+    class=3Dcode>a.pop(5)<BR>print a</SPAN><BR><SPAN =
+class=3Doutput>-&gt; [None,=20
+    None, None, 6, None, None, None, None, None]</SPAN><BR>
+    <LI><B>Creating arrays:</B> An array can be defined by one of four=20
+    procedures: zeros, ones, arange, or array. <B>zeros</B> creates an =
+array of=20
+    a specified size containing all zeros:<BR><SPAN class=3Dcode>a =3D=20
+    zeros(5)</SPAN> #a=3D[0 0 0 0 0]<BR><B>ones</B> similarly creates an =
+array of=20
+    a certain size containing all ones: <BR><SPAN class=3Dcode>a =3D =
+ones(5)</SPAN>=20
+    #a=3D[1 1 1 1 1]<BR><B>arange</B> works exactly the same as range, =
+but=20
+    produces an array instead of a list:<BR><SPAN class=3Dcode>a =3D=20
+    arange(10,0,-2)</SPAN> #a =3D [10 8 6 4 2] And finally, <B>array</B> =
+can be=20
+    used to convert a list to an array. For instance, when reading from =
+a file,=20
+    you can create an empty list and take advantage of the <SPAN=20
+    class=3Dtags>append</SPAN> command and lists not having a fixed =
+size. Then=20
+    once the data is all in the list, you can convert it to an =
+array:<BR><SPAN=20
+    class=3Dcode>a =3D [1, 3, 9]</SPAN> #create a list and append =
+it<BR><SPAN=20
+    class=3Dcode>a.append(3)<BR>a.append(5)<BR>print a</SPAN><BR><SPAN=20
+    class=3Doutput>-&gt; [1, 3, 9, 3, 5]</SPAN><BR><SPAN class=3Dcode>a =
+=3D=20
+    array(a)<BR>print a</SPAN><BR><SPAN class=3Doutput>-&gt; [1 3 9 3=20
+5]</SPAN><BR>
+    <LI><B>Multi-dimensional lists:</B> Because Python arrays are =
+actually=20
+    lists, you are allowed to have jagged arrays. Multi-dimensional =
+lists are=20
+    just lists of lists:<BR><SPAN =
+class=3Dcode>a=3D[[0,1,2],[3,4,5]]<BR>print=20
+    a[1]<BR><SPAN class=3Doutput>-&gt; [3, 4, 5]</SPAN><BR><SPAN =
+class=3Dcode>s =3D=20
+    ["Lee", "Walsh", "Roberson"]<BR>s2 =3D ["Williams", "Redick", =
+"Ewing",=20
+    "Dockery"]<BR>s3 =3D [s, s2]<BR>print s3[1][2]</SPAN><BR><SPAN=20
+    class=3Doutput>-&gt; Ewing</SPAN><BR>
+    <LI><B>Multi-dimensional arrays:</B> However, numarray does support =
+true=20
+    multi-dimensinoal arrays. These can be created through one of five =
+methods:=20
+    zeros, ones, array, arange, and reshape. <B>zeros</B> and =
+<B>ones</B> work=20
+    the same way as single dimensions except that they take a tuple of=20
+    dimensions (a comma separated list enclosed in parentheses) instead =
+of a=20
+    single argument:<BR><SPAN class=3Dcode>a =3D zeros((3,5))<BR>a[1,2] =
+=3D 8<BR>print=20
+    a<BR></SPAN><SPAN class=3Doutput>-&gt; [[0 0 0 0 =
+0]<BR>&nbsp;&nbsp;&nbsp; [0 0=20
+    8 0 0]<BR>&nbsp;&nbsp;&nbsp; [0 0 0 0 0]]<BR></SPAN><SPAN =
+class=3Dcode>b =3D=20
+    ones((2,3,4))</SPAN> #create a 2x3x4 array containing all=20
+    ones.<BR><BR><B>array</B> works the same way as for 1-d arrays: you =
+can=20
+    create a list and then convert it to an array. Note with =
+multi-dimensional=20
+    arrays though, trying to use array to convered a jagged list into an =
+array=20
+    will cause an error. Lists must be rectangular to be able to be =
+converted to=20
+    arrays.<BR><SPAN class=3Dcode>s =3D ["Lee", "Walsh", "Roberson", =
+"Brewer"]<BR>s2=20
+    =3D ["Williams", "Redick", "Ewing", "Dockery"]<BR>s3 =3D [s, =
+s2]<BR>s4 =3D=20
+    array(s3)<BR>print s4 + "test"<BR></SPAN><SPAN class=3Doutput>-&gt;=20
+    [['Leetest', 'Walshtest', 'Robersontest',=20
+    'Brewertest'],<BR>&nbsp;&nbsp;&nbsp; ['Williamstest', 'Redicktest',=20
+    'Ewingtest', 'Dockerytest']] </SPAN><BR><SPAN class=3Dcode>print=20
+    s4[:,1:3]</SPAN><BR><SPAN class=3Doutput>-&gt; [['Walsh',=20
+    'Roberson'],<BR>&nbsp;&nbsp;&nbsp; ['Redick',=20
+    'Ewing']]<BR></SPAN><B>arange</B> also works the same as with 1-d =
+arrays=20
+    except you need to pass the shape parameter:<BR><SPAN class=3Dcode>a =
+=3D=20
+    arange(25, shape=3D(5,5))</SPAN>,br&gt; And finally, <B>reshape</B> =
+can be=20
+    used to convert a 1-d array into a multi-dimensional array. To =
+create a 5x5=20
+    array with the elements numbered from 0 to 24, you could =
+use:<BR><SPAN=20
+    class=3Dcode>b =3D arange(25)<BR>b =3D reshape(b,5,5)<BR></SPAN>
+    <LI><B>Array Dimensions and Subscripts:</B> When creating a=20
+    multi-dimensional array, the format is ([[depth,] height,] width).=20
+    Therefore, when accessing array elements in a two dimensional array, =
+the row=20
+    is listed first, then the column. When accessing an element of a=20
+    two-dimensional list, the following notation must be used: <SPAN=20
+    class=3Dtags>list[i][j]</SPAN>. However, two dimensional arrays can =
+also use=20
+    the notation: <SPAN class=3Dtags>array[i,j]</SPAN>. In fact, this is =
+the=20
+    preferred notation of the two for arrays because you cannot use =
+wildcards in=20
+    the first dimension of the <SPAN class=3Dtags>array[i][j]</SPAN> =
+notation=20
+    (i.e., array[1:3][4] would cause an error whereas array[1:3,4] is=20
+    valid).<BR><BR>Wildcards can be used in array subscripts using the =
+<SPAN=20
+    class=3Dtags>: </SPAN>, which is known as slicing. This is similar =
+to IDL,=20
+    with one major difference: if <SPAN class=3Dtags>a=3D[0 1 2 3 4 =
+5]</SPAN>, in=20
+    IDL <SPAN class=3Dtags>a[1:4] =3D [1 2 3 4]</SPAN>, but in Python, =
+<SPAN=20
+    class=3Dtags>a[1:4] =3D [1 2 3]</SPAN>. In Python, when slicing =
+array[i:j], it=20
+    returns an array containing elements from i to j-1. Just like with =
+strings,=20
+    indices of arrays can be negative, in which case they count from the =
+right=20
+    instead of the left, i.e. <SPAN class=3Dtags>a[-4:-1] =3D [2 3 =
+4]</SPAN>. A=20
+    <SPAN class=3Dtags>:</SPAN> can also specify the rest of the =
+elements or up to=20
+    element, or all elements and arrays or lists can be used to =
+subscript other=20
+    arrays:<BR><SPAN class=3Dcode>print a[:3]</SPAN> #[0 1 2]<BR><SPAN=20
+    class=3Dcode>print a[4:]</SPAN> #[4 5]<BR><SPAN class=3Dcode>print =
+a[:]</SPAN>=20
+    #[0 1 2 3 4 5]<BR><SPAN class=3Dcode>print a[[1,3,4]]</SPAN> #[1 3=20
+    4]<BR><I>Note that slicing in python does not create a new array but =
+just a=20
+    pointer to the original array. b=3Da[0:10] followed by b[0] =3D 5 =
+also changes=20
+    a[0] to 5. To avoid this, use b =3D copy(a[0:10])</I> </LI></UL>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop bgColor=3D#ddffee>
+        <DIV><B>Array Operators:</B>
+        <UL>
+          <LI>Concatenation:<BR>
+          <UL>
+            <LI>Lists: a + b<BR>For Lists, the + operator appends the =
+list on=20
+            the right (b) to the list on the left.<BR><SPAN =
+class=3Dcode>a =3D=20
+            ["Roberson", "Walsh"]<BR>b =3D ["Lee", =
+"Humphrey"]<BR></SPAN><SPAN=20
+            class=3Doutput>-&gt; a+b =3D ["Roberson", "Walsh", "Lee",=20
+"Humphrey"]<BR>
+            <LI>Arrays: concatenate((a,b)[,axis])<BR>For arrays, use the =
+numarry=20
+            function concatenate. It also allows you to specify the axis =
+when=20
+            concatenating multi-dimensional arrays.<BR><SPAN =
+class=3Dcode>b =3D=20
+            arange(5)<BR>print concatenate((b, =
+arange(6)))<BR></SPAN><SPAN=20
+            class=3Doutput>-&gt; [0 1 2 3 4 0 1 2 3 4 5]</SPAN><BR><SPAN =
+
+            class=3Dcode>b=3Dreshape(b,5,1)<BR>print=20
+            concatenate((b,a),axis=3D1)<BR></SPAN><SPAN =
+class=3Doutput>-&gt; [[0 0 0=20
+            0]<BR>&nbsp;&nbsp;&nbsp; [1 0 0 0]<BR>&nbsp;&nbsp;&nbsp; [2 =
+0 8=20
+            0]<BR>&nbsp;&nbsp;&nbsp; [3 0 0 0]<BR>&nbsp;&nbsp;&nbsp; [4 =
+0 0=20
+            0]]<BR></LI></UL>
+          <LI>Equality: a =3D=3D b and Inequality: a !=3D b<BR>For =
+lists, these work=20
+          the same as for scalars, meaning they can be used in if =
+statments. For=20
+          arrays, they return an array containing true or false for each =
+array=20
+          element. </LI></UL></DIV></SPAN></SPAN></TD></TR>
+    <TR>
+      <TD bgColor=3D#ddeeff>
+        <DIV><B>Array Functions:</B> <SPAN class=3Dtags>All functions =
+but len are=20
+        for arrays only</SPAN>
+        <UL><CODE>
+          <LI><B>len</B>: returns the length of a list/array.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; s =3D ["Lee", "Walsh", "Roberson",=20
+          "Brewer"]<BR>&nbsp;&nbsp; print len(s) </SPAN>#4<BR>
+          <LI><B>argmax</B>([axis]): returns the index of the largest =
+element in=20
+          a 1D array or an array of the largest indices along the =
+specified axis=20
+          for a multi-dimensional array.<BR><SPAN =
+class=3Dcode>&nbsp;&nbsp; a =3D=20
+          array([[1,6,9], [2,4,0], [7,4,8]])<BR>&nbsp;&nbsp; print=20
+          a.argmax(1)<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+[2 1=20
+          2]</SPAN><BR>
+          <LI><B>argmin</B>([axis]): returns the index of the smallest =
+element=20
+          in a 1D array or an array of the smallest ndices along the =
+specified=20
+          axis for a multi-dimensional array.<BR><SPAN =
+class=3Dcode>&nbsp;&nbsp; b=20
+          =3D array([2,4,7,1,3,-1,5])<BR>&nbsp;&nbsp; print=20
+          b.argmin()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+5</SPAN><BR>
+          <LI><B>argsort</B>([axis]): returns an array of indices that =
+allow=20
+          access to the elements of the array in ascending =
+order.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+b.argsort()</SPAN><BR>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [5 3 0 4 1 6 2]</SPAN><BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print=20
+          b[b.argsort()]</SPAN><BR>&nbsp;&nbsp;<SPAN =
+class=3Doutput>-&gt; [-1 1 2=20
+          3 4 5 7]</SPAN><BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.argsort(1)</SPAN><BR>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+[[0 1=20
+          2]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [2 0=20
+          1]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [1 0 2]]<BR></SPAN>
+          <LI><B>astype</B>(type): returns a copy of the array converted =
+to the=20
+          specified type.<BR><SPAN class=3Dcode>&nbsp;&nbsp; a =3D=20
+          a.astype('Float64')<BR>&nbsp;&nbsp; b =3D =
+b.astype('Int32')<BR></SPAN>
+          <LI><B>copy</B>(): returns a copy of the array.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; c =3D a[:,2].copy()<BR>&nbsp;&nbsp; =
+print=20
+          c</SPAN><BR>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; [9 0 =
+8]<BR></SPAN>
+          <LI><B>diagonal</B>(): for multi-dimensional arrays, returns =
+the=20
+          diagonal elements of the array, where the row and column =
+indices are=20
+          equal.<BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.diagonal()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+[1 4=20
+          8]<BR></SPAN>
+          <LI><B>info</B>(): prints informations about the array which =
+may be=20
+          useful for debugging.<BR>
+          <LI><B>max</B>(): returns the largest element in the =
+array<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+a.max()<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; 9<BR></SPAN>
+          <LI><B>mean</B>(): returns the average of all elements in an=20
+          array<BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.mean()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt;=20
+          4.55555555556<BR></SPAN>
+          <LI><B>min</B>(): returns the smallest element in the =
+array<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+b.min()<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; -1<BR></SPAN>
+          <LI><B>nelements</B>(): returns the total number of elements =
+in the=20
+          array<BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.nelements()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+
+          9<BR></SPAN>
+          <LI><B>product</B>(array [,axis]): returns the product of an =
+array or=20
+          an array of the products along an axis of an array.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+product(b)<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; -840<BR></SPAN><SPAN =
+class=3Dcode>&nbsp;&nbsp; print=20
+          product(a,1)<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+[ 54 0=20
+          224]<BR></SPAN>
+          <LI><B>reshape</B>(array, shape): function that changes the =
+shape of=20
+          an array. But the new shape must have the same size as the old =
+shape,=20
+          otherwise an error will occur.<BR><SPAN =
+class=3Dcode>&nbsp;&nbsp; c =3D=20
+          reshape(a, 9)<BR>&nbsp;&nbsp; a =3D =
+reshape(c,(3,3))<BR></SPAN>
+          <LI><B>resize</B>(shape): shrinks/grows the array to a new =
+shape. Can=20
+          be called as a method (replaces old array) or a function. The =
+new=20
+          shape does not have to be the same size as the old shape. If =
+it is=20
+          smaller, values will be cut off, and it if is bigger, values =
+will=20
+          repeat.<BR><SPAN class=3Dcode>&nbsp;&nbsp; =
+a.resize(5)<BR>&nbsp;&nbsp;=20
+          print a</SPAN><BR>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; [1 6 =
+9 2=20
+          4]</SPAN><BR><SPAN class=3Dcode>&nbsp;&nbsp;=20
+          a.resize(2,6)<BR>&nbsp;&nbsp; print =
+a</SPAN><BR>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [[1 6 9 2 4 =
+0]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [7=20
+          4 8 1 6 9]]<BR></SPAN><SPAN class=3Dcode>&nbsp;&nbsp; c =3D=20
+          resize(a,(2,2))<BR>&nbsp;&nbsp; print =
+c</SPAN><BR>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [[1 6]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+[9=20
+          2]]<BR></SPAN>
+          <LI><B>shape</B>(array): returns the dimensions of the array =
+in a=20
+          tuple<BR><SPAN class=3Dcode>&nbsp;&nbsp; print shape(a), =
+shape(b),=20
+          shape(a)[0]*shape(a)[1]<BR></SPAN>&nbsp;&nbsp;<SPAN =
+class=3Doutput>-&gt;=20
+          (3,3) &nbsp;&nbsp; (7,) &nbsp;&nbsp; 9</SPAN><BR>
+          <LI><B>sort</B>(array [,axis]): returns an array containing a =
+copy of=20
+          the data in the array and the elements sorted in increasing =
+order. In=20
+          the case of a multi-dimensional array, the data will be sorted =
+along=20
+          one axis and not across the whole array.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+sort(b)<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [-1 1 2 3 4 5 7]</SPAN><BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+sort(a)<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [[1 6 =
+9]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0 2=20
+          4]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [4 7 8]]<BR></SPAN><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+sort(a,0)<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [[1 4 =
+0]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [2 4=20
+          8]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [7 6 9]]<BR></SPAN>
+          <LI><B>stddev</B>(): returns the std deviation of all elements =
+in the=20
+          array<BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.stddev()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt;=20
+          3.16666666667<BR></SPAN>
+          <LI><B>sum</B>(): Can be called as a method or a function. The =
+
+          behavior is identical for 1-d arrays. But for =
+multi-dimensional=20
+          arrays, calling as a method returns the sum of the entire =
+array,=20
+          whereas calling it as a function allows you to specify an axis =
+and=20
+          returns an array with the sums along that axis.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print =
+a.sum()<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; 41<BR></SPAN><SPAN =
+class=3Dcode>&nbsp;&nbsp; print=20
+          sum(a)<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; [10 14 =
+
+          17]<BR></SPAN><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          sum(a,1)<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; [16 =
+6=20
+          19]<BR></SPAN>
+          <LI><B>trace</B>(): Returns the sum of the diagonal elements =
+of an=20
+          array<BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.trace()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+13<BR></SPAN>
+          <LI><B>type</B>(): returns a string containing the type of the =
+
+          array.<BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          a.type()<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt;=20
+          Int32</SPAN><BR>
+          <LI><B>tolist</B>(): returns a list containing the same data =
+as the=20
+          array.<BR><SPAN class=3Dcode>&nbsp;&nbsp; c =3D =
+a.tolist()<BR></SPAN>
+          <LI><B>transpose</B>(): Can be called as a method (replaces =
+old array)=20
+          or a function. Returns the transpose of the array.<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; a.transpose()<BR>&nbsp;&nbsp; b =3D=20
+          transpose(a)<BR></SPAN>
+          <LI><B>where</B>(expr, 1, 0): Similar to the IDL where =
+function.=20
+          Returns an array of the same size and dimensions containing 1 =
+if the=20
+          condition is true and 0 if the condition is false. Any value =
+may be=20
+          substituted for 1 and 0, but they are the recommended values =
+(i.e.=20
+          true, false) so that <B>compress</B> can be used to extract =
+values=20
+          from the array: <B>compress</B>(mask_array, =
+data_array).<BR><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; c =3D where(b &gt; 2, 1, =
+0)<BR>&nbsp;&nbsp;=20
+          print c<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; [0 1 =
+1 0 1 0=20
+          1]</SPAN><BR><SPAN class=3Dcode>&nbsp;&nbsp; print=20
+          compress(c,b)<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+[4 7 3=20
+          5]</SPAN><BR><SPAN class=3Dcode>&nbsp;&nbsp; c =3D where(a =
+&gt; 2, 1,=20
+          0)<BR>&nbsp;&nbsp; print c<BR></SPAN>&nbsp;&nbsp;<SPAN=20
+          class=3Doutput>-&gt; [[0 1 =
+1]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0 1=20
+          0]<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [1 1 1]]<BR></SPAN><SPAN=20
+          class=3Dcode>&nbsp;&nbsp; print=20
+          compress(c,a)<BR></SPAN>&nbsp;&nbsp;<SPAN class=3Doutput>-&gt; =
+[6 9 4 7=20
+          4 8]</SPAN><BR></LI></UL></CODE>
+        <UL></UL></DIV></TR></TBODY></TABLE><BR><SPAN class=3Dheader>
+  <LI>Conditionals</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop>
+        <UL>
+          <LI><B>if</B>:<BR>if expr: statement<BR>
+          <LI><B>if-else</B>:<BR>if expr: statement1<BR>else: =
+statement2<BR>
+          <LI><B>if-elseif</B>: if expr: statement1<BR>elif expr:=20
+          statement2<BR>else: statement3<BR><BR>Multiple elifs can be =
+included=20
+          in the same if statement. There is no switch or case statement =
+so=20
+          multiple elifs must be used instead. While parenthesis are not =
+
+          required around the expression, they can be used. =
+</LI></UL></TD>
+      <TD width=3D25></TD>
+      <TD vAlign=3Dtop width=3D"50%" bgColor=3D#e7e7e7>
+        <DIV><B>Examples:</B><BR><CODE><SPAN class=3Dcode>if a &gt; b: =
+print "a is=20
+        greater than b";<BR><BR>if (a &gt; b):<BR>&nbsp;&nbsp; print "a =
+is=20
+        greater than b"<BR>&nbsp;&nbsp; print "blocks are defined by=20
+        indentation"<BR>elif (a &lt; b):<BR>&nbsp;&nbsp; print "a is =
+less than=20
+        b"<BR>else:<BR>&nbsp;&nbsp; print "a is equal to=20
+        =
+b"<BR><BR></SPAN></CODE></DIV></TD></TR></TBODY></TABLE><BR><SPAN=20
+class=3Dheader>
+  <LI>Loops</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop width=3D"50%">
+        <UL>
+          <LI><B>for</B>: for var in range(start [,stop [,inc]]):=20
+          statements<BR>Not unsimilar to IDL and basic, except for the =
+range=20
+          statement. var can be any variable. The range statement can =
+take start=20
+          and stop values, and an increment.=20
+          <LI><B>while</B>: while expr: statements<BR>Executes =
+statements while=20
+          the expression is true.=20
+          <LI><B>continue</B>: continue<BR>Skips the rest of the body of =
+the=20
+          loop for the current iteration and continue execution at the =
+beginning=20
+          of the next iteration.=20
+          <LI><B>break</B>: break<BR>Ends the execution of the current =
+loop.=20
+          <LI><B>else</B>: else<BR>for and while loops can both have =
+else=20
+          clauses, which are executed after the loop terminates normally =
+by=20
+          falsifying the conditional, but else clauses are not executed =
+when a=20
+          loop terminates via a break statement.=20
+          <LI><B>foreach</B>: for x in array: statements <BR>Loops over =
+the=20
+          array given by array. On each iteration, the value of the =
+current=20
+          element is assigned to x and the internal array pointer is =
+advanced by=20
+          one. </LI></UL></TD>
+      <TD width=3D15></TD>
+      <TD vAlign=3Dtop width=3D"50%" bgColor=3D#e7e9f1>
+        <DIV><B>Examples:</B><BR><CODE><SPAN class=3Dcode>for j in =
+range(10):=20
+        print "Value number " + str(j) +" is "+value[j]<BR><BR>for j in=20
+        range(10,0,-2):<BR>&nbsp;&nbsp; x =3D x + j<BR>&nbsp;&nbsp; =
+print=20
+        x<BR><BR>while (b &lt; a):<BR>&nbsp;&nbsp; print "b is less than =
+
+        a."<BR>&nbsp;&nbsp; b=3Db+1<BR><BR>for j in =
+range(0,10):<BR>&nbsp;&nbsp;=20
+        while(k &lt; j):<BR>&nbsp;&nbsp;&nbsp;&nbsp; print "j =3D " + =
+str(j) + " k=20
+        =3D "+str(k)<BR>&nbsp;&nbsp;&nbsp;&nbsp; if (j =3D=3D 1):=20
+        break<BR>&nbsp;&nbsp;&nbsp;&nbsp; k=3Dk+1<BR>&nbsp;&nbsp; print =
+"j equals=20
+        k or j equals 1"<BR><BR>a =3D ["abc","def","ghi"]<BR>for x in=20
+        a:<BR>&nbsp;&nbsp; print=20
+  x<BR></SPAN></CODE></DIV></TD></TR></TBODY></TABLE><BR><SPAN =
+class=3Dheader>
+  <LI>Functions</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop width=3D"50%">
+        <UL>
+          <LI><B>Definition:</B> Functions in Python are defined with =
+the=20
+          following syntax:<BR><SPAN class=3Dcode>def funct(arg_11, =
+arg_2, ...,=20
+          arg_n):<BR>&nbsp;&nbsp; print "This is a =
+function."<BR>&nbsp;&nbsp;=20
+          return value<BR></SPAN>Any Python code, including other =
+function and=20
+          class definitions, may appear inside a function. Functions may =
+also be=20
+          defined within a conditional, but in that case the function's=20
+          definition must be processed prior to its being called. Python =
+does=20
+          not support function overloading but does support variable =
+number of=20
+          arguments, default arguments, and keyword arguments. Return =
+types are=20
+          not specified by functions.=20
+          <LI><B>Arguments:</B> Function arguments are passed by value =
+so that=20
+          if you change the value of the argument within the function, =
+it does=20
+          not get changed outside of the function. If you want the =
+function to=20
+          be able to modify non-local variables, you must declare them =
+as <SPAN=20
+          class=3Dtags>global</SPAN> in the first line of the function. =
+Note that=20
+          if you declare any variables as global, that name cannot be =
+reused in=20
+          the argument list, i.e. this would cause an error:<BR>function =
+
+          double(x):<BR>&nbsp;&nbsp; global x<BR>&nbsp;&nbsp; x =3D=20
+          x*2<BR>&nbsp;&nbsp; return<BR>double(x)<BR>Instead this could =
+be=20
+          done<BR><SPAN class=3Dcode>function double(n):<BR>&nbsp;&nbsp; =
+n =3D n *=20
+          2<BR>&nbsp;&nbsp; return n<BR>x =3D =
+double(x)</SPAN><BR>Or<BR><SPAN=20
+          class=3Dcode>function doubleX():<BR>&nbsp;&nbsp; global=20
+          x<BR>&nbsp;&nbsp; x =3D x * 2<BR>&nbsp;&nbsp;=20
+          return<BR>doubleX()</SPAN><BR>
+          <LI><B>Default Arguments:</B> A function may define default =
+values for=20
+          arguments. The default must be a constant expression or array =
+and any=20
+          defaults should be on the right side of any non-default=20
+          arguments.<BR><SPAN class=3Dcode>def square(x =3D =
+5):<BR>&nbsp;&nbsp;=20
+          return x*x<BR></SPAN>If this function is called with <SPAN=20
+          class=3Dcode>square()</SPAN>, it will return 25. Otherwise, if =
+it is=20
+          called with <SPAN class=3Dcode>square(n) </SPAN>, it will =
+return n^2.=20
+          <LI><B>Variable length argument lists:</B> Variable length =
+arguments=20
+          are supported by being wrapped up in a tuple. Before the =
+variable=20
+          number of arguments, zero or more normal arguments may =
+occur:<BR><SPAN=20
+          class=3Dcode>def var_args(arg1, arg2, *args):</SPAN><BR>
+          <LI><B>Keyword arguments:</B> Functions can also be called =
+using=20
+          arguments of the form <I>keyword =3D value</I>:<BR><SPAN =
+class=3Dcode>def=20
+          player(name, number, team=3D"Florida"):<BR>&nbsp;&nbsp; =
+print(name +=20
+          "wears number " + str(number) + "for " + team)<BR>player("Matt =
+Walsh",=20
+          44)<BR>player(number =3D 44, name =3D "David =
+Lee")<BR>player("Anthony=20
+          Roberson", number =3D 1)<BR>player(name =3D "J.J. Redick", =
+number =3D 4,=20
+          team =3D "Duke")<BR>
+          <LI><B>Return:</B> Values are returned from the function with =
+the=20
+          return command: <SPAN class=3Dcode>return var</SPAN>. You can =
+not return=20
+          multiple values, but that can be achieved by returning an =
+array or=20
+          object. Return immediately ends execution of the function and =
+passes=20
+          control back to the line from which it was called.=20
+          <LI><B>Variable Functions:</B> Python supports the concept of =
+variable=20
+          functions. That means that if a variable can point to a =
+function=20
+          instead of a value. Objects within a method can be called=20
+          similarly.<BR><SPAN class=3Dcode>def test():<BR>&nbsp;&nbsp; =
+print 'This=20
+          is a test.'<BR>var =3D test<BR>var()</SPAN> #this calles =
+test()<BR><SPAN=20
+          class=3Dcode>var =3D circle.setRadius<BR>var(3)</SPAN> #this =
+calls=20
+          circle.setRadius(3) =
+</LI></SPAN></UL></TD></TR></TBODY></TABLE><BR><SPAN=20
+  class=3Dheader>
+  <LI>Classes and OOP</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop width=3D"50%">Python supports OOP and classes to =
+an extent,=20
+        but is not a full OOP language. A class is a collection of =
+variables and=20
+        functions working with these variables. Classes are defined =
+somewhat=20
+        similarly to Java, but differences include <SPAN =
+class=3Dtags>self</SPAN>=20
+        being used in place of <B>this</B> and constructors being named =
+<SPAN=20
+        class=3Dtags>__init__</SPAN> instead of <B>classname</B>. Also =
+note that=20
+        <SPAN class=3Dtags>self</SPAN> must be used every time a =
+class-wide=20
+        variable is referenced and must be the first argument in each =
+function's=20
+        argument list, including the constructor. In addition, functions =
+and=20
+        constructors cannot be overloaded, but as discussed above, do =
+support=20
+        default arguments instead. Like functions, a class must be =
+defined=20
+        before it can be instantiated. In Python, all class members are =
+public.=20
+        <UL>
+          <LI><B>Initializing vars</B>: Only constant initializers for =
+class=20
+          variables are allowed (<SPAN class=3Dcode>n =3D 1</SPAN>). To =
+initialize=20
+          variables with non-constant values, you must use the =
+constructor. You=20
+          cannot declare unitialized variables.=20
+          <LI><B>Encapsulation</B>: Python does not really support =
+encapsulation=20
+          because it does not support data hiding through private and =
+protected=20
+          members. However some pseudo-encapsulation can be done. If an=20
+          identifier begins with a double underline, i.e. <SPAN=20
+          class=3Dtags>__a</SPAN>, then it can be referred to within the =
+class=20
+          itself as <SPAN class=3Dtags>self.__a</SPAN>, but outside of =
+the class,=20
+          it is named <SPAN class=3Dtags>instance._classname__a</SPAN>. =
+Therefore,=20
+          while it can prevent accidents, this pseudo-encapsulation =
+cannot=20
+          really protect data from hostile code.=20
+          <LI><B>Inheritence</B>: Python allows classes to be extended =
+(see=20
+          right) by adding the base class name in parenthesis after the =
+derived=20
+          class name: <SPAN class=3Dtags>class Derived(Base):</SPAN>. =
+The child=20
+          class takes all the variables and functions from the parent =
+class and=20
+          can extend that class by adding additional variables and =
+adding or=20
+          overriding functions. If class B extends class A, then A or B =
+can be=20
+          used anywhere an A is expected, but only B can be used where a =
+B is=20
+          expected because it contains additional information/methods =
+not found=20
+          in A. In addition, Python supports multiple inheritence: <SPAN =
+
+          class=3Dtags>class Derived(Base1, Base2, Base3):</SPAN>=20
+          <LI><B>Abstract classes</B>: Abstract classes and interfaces =
+are not=20
+          supported in Python. In Python, there is no difference between =
+an=20
+          abstract class and a concrete class. Abstract classes create a =
+
+          template for other classes to extend and use. Instances can =
+not be=20
+          created of abstract classes but they are very useful when =
+working with=20
+          several objects that share many characteristics. For instance, =
+when=20
+          creating a database of people, one could define the abstract =
+class=20
+          "Person", which would contain basic attributes and functions =
+common to=20
+          all people in the database. Then child classes such as =
+"SinglePerson",=20
+          "MarriedCouple", or "Athlete" could be created by extending =
+"Person"=20
+          and adding appropriate variables and functions. The database =
+could=20
+          then be told to expect every entry to be an object of type =
+"Person"=20
+          and thus any of the child classes would be a valid entry. In =
+Python,=20
+          you could create a class Person and extend it with the child =
+classes=20
+          listed above, but you could not prevent someone from =
+instantiating the=20
+          Person class.=20
+          <LI><B>Parent</B>: The parent keyword is not supported by =
+Python, but=20
+          you can call methods from the base classes directly: <SPAN=20
+          class=3Dcode>BaseClass.method_name(self, arguments)</SPAN> =
+(see right).=20
+          <LI><B>Constructors</B>: Constructors are fuctions that are=20
+          automatically called when you create a new instance of a =
+class. They=20
+          can be used for initialization purposes. A function is a =
+constructor=20
+          when it has the name __init__. When extending classes, if a =
+new=20
+          constructor is not defined, the constructor from the parent =
+class is=20
+          used (see right). When an object of type <SPAN=20
+          class=3Dtags>RectWithPerimeter </SPAN>is created, the =
+constructor from=20
+          <SPAN class=3Dtags>Rectangle</SPAN> is called. If however, I =
+were to add=20
+          a function in <SPAN class=3Dtags>RectWithPerimeter</SPAN> with =
+the name=20
+          <SPAN class=3Dcode>__init__ </SPAN>, then that function would =
+be used as=20
+          its constructor.=20
+          <LI><B>Comparing Objects</B>: Objects can be compared using =
+the =3D=3D and=20
+          !=3D operators. Two objects are equal only if they are the =
+same instance=20
+          of the same object. Even if two objects have the same =
+attributes and=20
+          values and are instances of the same class, they are not equal =
+if the=20
+          are separate instances. </LI></UL></TD>
+      <TD width=3D20></TD>
+      <TD vAlign=3Dtop bgColor=3D#e7f2e9>
+        <DIV><B>Example Class:</B><BR><SPAN class=3Dcode>class=20
+        Rectangle:<BR></SPAN>#Optionally define variable width<SPAN=20
+        class=3Dcode><BR>&nbsp;&nbsp; width =3D 0<BR></SPAN>#Constructor =
+with=20
+        default arguments<SPAN class=3Dcode><BR>&nbsp;&nbsp; def =
+__init__(self,=20
+        width =3D 0, height =3D 0):<BR>&nbsp;&nbsp;&nbsp;&nbsp; =
+self.width =3D=20
+        width<BR>&nbsp;&nbsp;&nbsp;&nbsp; self.height =3D=20
+        height<BR></SPAN>#functions<SPAN class=3Dcode><BR>&nbsp;&nbsp; =
+def=20
+        setWidth(self, width):<BR>&nbsp;&nbsp;&nbsp;&nbsp; self.width =
+=3D=20
+        width<BR>&nbsp;&nbsp; def setHeight(self,=20
+        height):<BR>&nbsp;&nbsp;&nbsp;&nbsp; self.height =3D=20
+        height<BR>&nbsp;&nbsp; def =
+getArea(self):<BR>&nbsp;&nbsp;&nbsp;&nbsp;=20
+        return self.width * self.height<BR><BR>arect =3D =
+Rectangle()</SPAN>=20
+        #create a new Rectangle with dimensions 0x0. <BR><SPAN=20
+        class=3Dcode>arect.setWidth(4)<BR>arect.setHeight(6)<BR>print=20
+        arect.getArea()</SPAN><BR><SPAN class=3Doutput>&nbsp; -&gt;=20
+        24</SPAN><BR><SPAN class=3Dcode>rect2 =3D Rectangle(7,3)</SPAN> =
+#new=20
+        Rectangle with dimensions 7x3.<BR></SPAN><BR><B>Extended=20
+        Class:</B><BR><SPAN class=3Dcode>class=20
+        RectWithPerimeter(Rectangle):<BR></SPAN>#add new functions<SPAN=20
+        class=3Dcode><BR>&nbsp;&nbsp; def=20
+        getPerimeter(self):<BR>&nbsp;&nbsp;&nbsp;&nbsp; return =
+2*self.height +=20
+        2*self.width<BR>&nbsp;&nbsp; def setDims(self, width,=20
+        height):<BR></SPAN>#call base class methods from Rectangle <SPAN =
+
+        class=3Dcode><BR>&nbsp;&nbsp;&nbsp;&nbsp; =
+Rectangle.setWidth(self,=20
+        width)<BR>&nbsp;&nbsp;&nbsp;&nbsp; Rectangle.setHeight(self,=20
+        height)<BR>arect =3D RectWithPerimeter(6,5)</SPAN> #Uses the =
+constructor=20
+        from Rectangle because no new constructor is provided to =
+override=20
+        it.<BR><SPAN class=3Dcode>print arect.getArea()</SPAN> #Uses the =
+getArea=20
+        function from Rectangle and prints 30.<BR><SPAN =
+class=3Dcode>print=20
+        arect.getPerimeter()</SPAN> #Uses getPerimeter from =
+RectWithPerimeter=20
+        and prints 22.<BR><SPAN class=3Dcode>arect.setDims(4,9)</SPAN> =
+#Use=20
+        setDims to change the =
+dimensions.<BR></DIV></TD></TR></TBODY></TABLE><BR><SPAN=20
+  class=3Dheader>
+  <LI>File I/O</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop>
+        <UL>
+          <LI><B>Opening Files</B>: file <B>open</B>(string filename, =
+string=20
+          mode): <BR>open can be used to open files for reading, =
+writing, and=20
+          appending. It binds a named file object to a stream that can =
+then be=20
+          used to read/write data. Possible modes include:
+          <UL>
+            <LI>'r': Open for reading.=20
+            <LI>'w': Open for writing. Any existing data will be =
+overwritten.=20
+            <LI>'a': Open for writing. New data will be appended to =
+existing=20
+            data.=20
+            <LI>'b': Use this flag when working with binary files (e.g. =
+'rb').=20
+            </LI></UL>
+          <LI><B>Checking Files</B>: Python supports several methods of =
+checking=20
+          if a file exists and checking its properties:
+          <UL>
+            <LI>bool <B>os.access</B>(string path, int mode): returns =
+TRUE if=20
+            the filename exists and matches the mode query. The mode =
+query can=20
+            be any of the following constants:
+            <UL>
+              <LI><B>os.F_OK</B>: test the existence of path=20
+              <LI><B>os.R_OK</B>: tests if path exists and is readable=20
+              <LI><B>os.W_OK</B>: tests if path exists and is writable=20
+              <LI><B>os.X_OK</B>: tests if path exists and is executable =
+
+            </LI></UL></LI></UL>
+          <LI><B>File Operations</B>: Python also supports file =
+operations such=20
+          as renaming and deleting files. And of course any shell =
+command can be=20
+          excecuted via os.system.
+          <UL>
+            <LI>bool <B>os.system</B>(string command): attempts to =
+execute the=20
+            supplied shell command and returns true if the command =
+executed.=20
+            <LI>bool <B>chmod</B>(string path, int mode): Changes the=20
+            permissions of path to mode. Mode should be defined as an =
+octal=20
+            (i.e. 0644 or 0777).=20
+            <LI>list <B>listdir</B>(string path): Returns a list =
+containing all=20
+            the files in the current directory. The special entries "." =
+and ".."=20
+            are not included.=20
+            <LI>bool <B>mkdir</B>(string pathname [, int mode]): Makes a =
+
+            directory pathname with permissions mode (e.g. <SPAN=20
+            class=3Dcode>mkdir('new_dir', 0700);</SPAN>)=20
+            <LI>bool <B>remove</B>(String filename): Deletes filename=20
+            <LI>bool <B>rename</B>(string oldname, string newname): =
+Renames a=20
+            file=20
+            <LI>bool <B>symlink</B>(string target, string link): Creates =
+a=20
+            symbolic link to the existing target with name link. =
+</LI></UL>
+          <LI><B>Reading Files</B>: Files can be read by several =
+methods.
+          <UL>
+            <LI>string <B>read</B>([int length]): Reads up to a =
+specified number=20
+            of bytes from the file into a string. It will read until it=20
+            encounters EOF or the specified length is reached (default =
+is all=20
+            data).=20
+            <LI>string <B>readline</B>([int length]): Reads one entire =
+line from=20
+            a file, or up to length bytes, into a string. Reading stops =
+when=20
+            length bytes have been read or a newline or EOF is reached. =
+A=20
+            trailing newline character is kept in the string (but may be =
+absent=20
+            on the last line of the file).=20
+            <LI>list <B>readlines</B>([int sizehint]): Reads from a file =
+using=20
+            readline() until EOF and returns a list containing the lines =
+read.=20
+            If sizehint is present, whole lines totaling approximately =
+sizehint=20
+            bytes are read. </LI></UL>
+          <LI><B>EOF</B>: end-of-file is reached when read or readline =
+returns=20
+          an empty string. <SPAN class=3Dcode>while (s !=3D =
+""):<BR>&nbsp;&nbsp; s =3D=20
+          f.readline()<BR>&nbsp;&nbsp; do_something<BR></SPAN>
+          <LI><B>Writing to files</B>: Files that have been opened for =
+writing=20
+          with open can be written to by two methods.
+          <UL>
+            <LI>void <B>write</B>(string string): Writes the contents of =
+string=20
+            to the file. Does not append a newline character to the =
+string. Only=20
+            strings can be written so other datatypes must be converted =
+to=20
+            strings.=20
+            <LI>void <B>writelines</B>(list data): Writes a list or =
+array of=20
+            strings to the file. Newlines will not be added between the =
+elements=20
+            of the list/array. </LI></UL>
+          <LI><B>Concurrency</B>: File locking is available through the =
+flock=20
+          method in the fcntl module. Though be warned, <I>flock does =
+not work=20
+          reliably on all operating systems</I>. Therefore you may want =
+to=20
+          develop your own semaphores instead. The syntax is:=20
+          <B>flock</B>(fileDescriptor fd, int operation), where the file =
+
+          descriptor can be obtained by calling the <B>fileno()</B> =
+method of a=20
+          file object and operation can be LOCK_SH to acquire a shared =
+lock=20
+          (reader), LOCK_EX to acquire an exclusive lock (writer), =
+LOCK_UN to=20
+          release a lock, or LOCK_NB if you don't want flock to block =
+while=20
+          locking.=20
+          <LI><B>Serializing Objects</B>: An object can be serialized =
+with=20
+          methods in the <SPAN class=3Dtags>pickle</SPAN> module. This =
+will create=20
+          a string representation of the object that can be stored in a =
+file and=20
+          later reconstructed into the object. In this way, ints, =
+floats, or any=20
+          object can be written to a file in addition to strings. If the =
+object=20
+          is an instance of a class, that class must be defined or =
+imported in=20
+          the python program that unserializes the object (i.e. if you =
+have an=20
+          object of type A in a.py, serialize it, write it to a file, =
+and on=20
+          b.py you read it back in from the file, then class A must be =
+defined=20
+          in b.py or included via <SPAN class=3Dcode>import a</SPAN> to=20
+          unserialize the object. An easy solution is to put the =
+definition of=20
+          class A in a file to be imported in both a.py and b.py). =
+Arrays can be=20
+          serialized as well. If you have an object x, you can serialize =
+it and=20
+          save it to a file:<BR><SPAN class=3Dcode>f =3D=20
+          =
+open("file.dat","wb")<BR>pickle.dump(x,f)<BR>f.close()<BR></SPAN>It=20
+          can then be unserialized and restored by:<BR><SPAN =
+class=3Dcode>f =3D=20
+          open("file.dat","rb")<BR>y =3D =
+pickle.load(f)<BR>f.close()<BR></SPAN>
+          <LI><B>Sockets</B>: To use sockets in Python, <SPAN =
+class=3Dtags>import=20
+          socket </SPAN>. A server socket can then be opened =
+with:<BR><SPAN=20
+          class=3Dcode>mySocket =3D socket.socket(socket.AF_INET,=20
+          socket.SOCK_STREAM)<BR>mySocket.bind(('',=20
+          2727))<BR>mySocket.listen(1)<BR></SPAN>The first line creates =
+a socket=20
+          object. The second line binds the socket to an address. In =
+this case,=20
+          '' is a symbolic name meaning localhost and we select port =
+2727. The=20
+          address parameter should be in the form of a tuple as shown =
+above.=20
+          Finally, the third line listens for connections made to a =
+socket. The=20
+          argument is the maximum number of queued connections. Now that =
+a=20
+          server socket is open, we need to be able to accept data: =
+<BR><SPAN=20
+          class=3Dcode>conn, addr =3D mySocket.accept()<BR>print =
+'Connected with ',=20
+          addr<BR>while True:<BR>&nbsp;&nbsp; data =3D=20
+          conn.recv(1024)<BR>&nbsp;&nbsp; if not data: =
+break<BR>&nbsp;&nbsp;=20
+          print data<BR>&nbsp;&nbsp; conn.send("Data=20
+          received")<BR>conn.close()<BR></SPAN>The <B>accept</B>() =
+method=20
+          accepts a connection and returns a pair (conn, address), where =
+conn is=20
+          a new socket object usable to send and receive data on the =
+connection=20
+          and address is the address bound to the socket on the other =
+end=20
+          (client side) of the connection. We then enter a loop and =
+receive data=20
+          from the client using the <B>recv</B>(bufsize) method. recv =
+returns a=20
+          string of the data received with a maximum amount of data =
+specified by=20
+          bufsize. If data is false, we break out of the loop. Otherwise =
+we=20
+          print the data and use <B>send</B>(string) to send a message =
+back to=20
+          the client. <BR>Now our server is complete, but we need a =
+client-side=20
+          socket:<BR><SPAN class=3Dcode>cSocket =3D =
+socket.socket(socket.AF_INET,=20
+          =
+socket.SOCK_STREAM)<BR>cSocket.connect(("polaris.astro.ufl.edu","2727"))<=
+BR></SPAN>The=20
+          first line of course creates a socket object. The second line =
+is=20
+          similar to <B>bind</B> except that it connects to an existing =
+server=20
+          socket specified by the address. Note that ("localhost", 2727) =
+would=20
+          be another valid address. Now we need to send and receive=20
+          data:<BR><SPAN class=3Dcode>cSocket.send("Hello =
+world!")<BR>data =3D=20
+          cSocket.recv(1024)<BR>cSocket.close()<BR>print=20
+          data<BR></SPAN><B>send</B> and <B>recv</B> work just the same =
+as they=20
+          do in the server socket. We send data to the server ("Hello =
+world!"),=20
+          receive the response ("Data received"), close the connection =
+(which=20
+          causes data to become false on the server program and =
+terminate the=20
+          loop), and print out the data. </LI></UL></TD></TR>
+    <TR>
+      <TD bgColor=3D#eaeae7><B>Examples:</B><BR><SPAN class=3Dcode>file =
+=3D=20
+        open("data/teams.txt","rb")<BR>team =3D "nonempty"<BR>while =
+(team !=3D=20
+        ""):<BR>&nbsp;&nbsp; team =3D file.readline()<BR>&nbsp;&nbsp; if =
+(team !=3D=20
+        ""): print team[:-1] &nbsp; #get rid of extra newline=20
+        character<BR>file.close()<BR><BR>file =3D=20
+        open("data/teams.txt","rb")<BR>team =3D=20
+        file.readlines()<BR>file.close()<BR><BR>list =3D=20
+        ["Florida","Clemson","Duke"]<BR>file =3D=20
+        open("data/teams.txt","wb")<BR>for j in list:=20
+        file.write(j+"\n")<BR>file.close()<BR><BR>import pickle, =
+fcntl<BR>player=20
+        =3D Player("J.J. Redick", "Duke", 4)<BR>file =3D =
+open("data/players.txt",=20
+        "a")<BR>fcntl.flock(file.fileno(), =
+fcntl.LOCK_EX)<BR>pickle.dump(player,=20
+        file)<BR>fcntl.flock(file.fileno(),=20
+        =
+fcntl.LOCK_UN)<BR>file.close()<BR></SPAN></TD></TR></TBODY></TABLE><BR><S=
+PAN=20
+  class=3Dheader>
+  <LI>Images in Python</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><B>FITS files:</B> Python supports FITS files via =
+the=20
+        module <SPAN class=3Dtags>pyfits</SPAN>. Once this module has =
+been=20
+        imported, you can read and write FITS files. FITS files are read =
+and=20
+        stored in and HDUList object, which has two components: header =
+and data.=20
+        The header is a list-like object and data is usually an array. =
+To read=20
+        in a FITS file, use=20
+        <UL>
+          <LI>HDUList <B>open</B>(string): open a filename<BR>
+          <LI><B>info</B>(): print a summary of the objects in the =
+file.<BR>Note=20
+          that FITS files can have what are called multiple extensions-- =
+
+          multiple images and/or headers in a single file. <B>info</B> =
+will list=20
+          all objects in the file, their name, type, cards (number of =
+entries in=20
+          the header), dimensions, and format (i.e., Int16 or Float32).=20
+        </LI></UL><BR>Now that you have a FITS object, you can access =
+its header=20
+        and data. Since each object within a file can have its own =
+header and=20
+        data, you would access the primary header as <SPAN=20
+        class=3Dtags>x[0].header</SPAN> and the data as <SPAN=20
+        class=3Dtags>x[0].data</SPAN>. <BR><BR><I>Headers:</I>You can =
+print the=20
+        entire header by calling the <SPAN=20
+        class=3Dcode>x[0].header.ascardlist()</SPAN> method. You can =
+access=20
+        individual elements in the header directly by keyword (<SPAN=20
+        class=3Dtags>x[0].header['NAXIS1']</SPAN>) or by index (<SPAN=20
+        class=3Dtags>x[0].header[3]</SPAN>). If you know that a keyword =
+is already=20
+        present in the header, you can update its value using the same=20
+        notation:<BR><SPAN class=3Dcode>x[0].header['NAXIS1'] =3D =
+265</SPAN><BR>But=20
+        if the keyword might not be present and you want to add it if it =
+isn't,=20
+        use the <B>update</B>() method instead:<BR><SPAN=20
+        =
+class=3Dcode>x[0].header.update('NAXIS1',265)</SPAN><BR><BR><I>Data:</I> =
+
+        Since the data is an array, you can use any <SPAN=20
+        class=3Dtags>numarray</SPAN> methods on it. The data can thus be =
+accessed=20
+        using slice notation as well.<BR><SPAN class=3Dcode>print=20
+        shape(x[0].data)<BR>print =
+x[0].data[0:5,0:5]<BR></SPAN><BR><I>Writing=20
+        FITS Files:</I> Once the data and header have been modified, you =
+can=20
+        write them back to a new FITS file using <B>writeto</B>(string). =
+This=20
+        writes to a new file and closes that file, but further =
+operations can=20
+        still be done on the data in memory. Note that if a file exists =
+with the=20
+        specified name, it will <I>NOT</I> be overwritten and an error =
+will be=20
+        raised. To close the input file, use <SPAN =
+class=3Dcode>x.close()</SPAN>.=20
+      </TD>
+      <TD width=3D10></TD>
+      <TD vAlign=3Dtop width=3D"50%" =
+bgColor=3D#e5e5e7><B>Examples:</B><BR><SPAN=20
+        class=3Dcode>x =3D =
+pyfits.open("NGC3031.fits")<BR>x.info()<BR></SPAN><SPAN=20
+        class=3Doutput><PRE>-&gt; Filename: NGC3031.fits
+No.  Name     Type    Cards Dimensions Format
+0  PRIMARY PrimaryHDU    6  (530, 530)  UInt8</PRE></SPAN><SPAN=20
+        class=3Dcode>print x[0].header.ascardlist()<BR></SPAN><SPAN =
+class=3Doutput><PRE>-&gt; SIMPLE  =3D                    T
+BITPIX  =3D                    8
+NAXIS   =3D                    2
+NAXIS1  =3D                  530
+NAXIS2  =3D                  530
+HISTORY Written by XV 3.10a</PRE></SPAN><SPAN class=3Dcode>print=20
+        x[0].header['NAXIS1']<BR></SPAN><SPAN class=3Doutput>-&gt;=20
+        530</SPAN><BR><SPAN class=3Dcode>print =
+x[0].header[3]<BR></SPAN><SPAN=20
+        class=3Doutput>-&gt; 530</SPAN><BR><BR><SPAN class=3Dcode>print=20
+        x[0].data[3,0:5]<BR></SPAN><SPAN class=3Doutput>-&gt; [11 11 11 =
+9=20
+        9]</SPAN><BR><BR><SPAN class=3Dcode>x[0].data[3,0:3] =3D=20
+        array([0,0,0])<BR>print x[0].data[3,0:5]</SPAN><BR><SPAN=20
+        class=3Doutput>-&gt; [0 0 0 9 9]</SPAN><BR><BR><SPAN =
+class=3Dcode>x[0].data=20
+        +=3D 5</SPAN> #using numarray to operate on entire =
+array<BR><SPAN=20
+        class=3Dcode>print x[0].data[3,0:5]</SPAN><BR><SPAN =
+class=3Doutput>-&gt; [ 5=20
+        5 5 14 14]</SPAN><BR><BR><SPAN=20
+        =
+class=3Dcode>x.writeto("new_file.fits")<BR>x.close()<BR></SPAN></TD></TR>=
+</TBODY></TABLE><BR><SPAN=20
+  class=3Dheader>
+  <LI>Guess My Number</SPAN><BR>
+  <TABLE cellPadding=3D4 bgColor=3D#ffffff border=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop bgColor=3D#f1ffff>
+        <DIV>Here is the code for Guess My Number in Python, a program =
+that=20
+        generates a random number between 1 and 100 and asks the user to =
+guess=20
+        it. It will tell the user if the number is higher or lower after =
+each=20
+        guess and keep track of the number of guesses. <PRE><SPAN =
+class=3Dcode>#!/usr/bin/python
+import random, math
+random.seed()
+x =3D math.floor(random.random()*100)+1
+z =3D 0
+b =3D 0
+while x !=3D z:
+   b=3Db+1
+   z =3D input("Guess My Number: ")
+   if z &lt; x: print("Higher!")
+   if z &gt; x: print("Lower!")
+print("Correct! " + str(b) + " tries.")
+</SPAN>
+</PRE></DIV></TD></TR></TBODY></TABLE><BR><SPAN class=3Dheader>
+  <LI>Python reference</SPAN><BR><A=20
+  href=3D"http://www.python.org/">Python.org</A>: includes an =
+introductory=20
+  tutorial and a full manual. <BR><A=20
+  =
+href=3D"http://www.stsci.edu/resources/software_hardware/numarray">Numarr=
+ay=20
+  homepage</A>: includes a full manual about numarray features.=20
+</LI></SPAN></OL></BODY></HTML>
+
+------=_NextPart_000_0000_01CCE199.66D34730
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Location: http://www.astro.ufl.edu/~warner/prog/prog_style.css
+
+.header {
+	FONT: bold 16pt Times
+}
+.tags {
+	FONT: 12pt Arial; COLOR: blue
+}
+.code {
+	FONT: 12pt Arial; COLOR: red
+}
+.output {
+	FONT: 12pt Arial; COLOR: green
+}
+
+------=_NextPart_000_0000_01CCE199.66D34730--
